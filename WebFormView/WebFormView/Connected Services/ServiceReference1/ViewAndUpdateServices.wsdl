@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ViewAndUpdateServices" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:62525/ViewAndUpdateServices.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:62525/ViewAndUpdateServices.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IViewAndUpdateServices_viewName_InputMessage">
+    <wsdl:part name="parameters" element="tns:viewName" />
+  </wsdl:message>
+  <wsdl:message name="IViewAndUpdateServices_viewName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:viewNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IViewAndUpdateServices_viewEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:viewEmail" />
+  </wsdl:message>
+  <wsdl:message name="IViewAndUpdateServices_viewEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:viewEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IViewAndUpdateServices_viewPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:viewPassword" />
+  </wsdl:message>
+  <wsdl:message name="IViewAndUpdateServices_viewPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:viewPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IViewAndUpdateServices_viewUserName_InputMessage">
+    <wsdl:part name="parameters" element="tns:viewUserName" />
+  </wsdl:message>
+  <wsdl:message name="IViewAndUpdateServices_viewUserName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:viewUserNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IViewAndUpdateServices_viewMobileNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:viewMobileNumber" />
+  </wsdl:message>
+  <wsdl:message name="IViewAndUpdateServices_viewMobileNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:viewMobileNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IViewAndUpdateServices_viewAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:viewAddress" />
+  </wsdl:message>
+  <wsdl:message name="IViewAndUpdateServices_viewAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:viewAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IViewAndUpdateServices_viewCreditNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:viewCreditNumber" />
+  </wsdl:message>
+  <wsdl:message name="IViewAndUpdateServices_viewCreditNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:viewCreditNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IViewAndUpdateServices_viewCreditPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:viewCreditPassword" />
+  </wsdl:message>
+  <wsdl:message name="IViewAndUpdateServices_viewCreditPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:viewCreditPasswordResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IViewAndUpdateServices">
+    <wsdl:operation name="viewName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IViewAndUpdateServices/viewName" message="tns:IViewAndUpdateServices_viewName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IViewAndUpdateServices/viewNameResponse" message="tns:IViewAndUpdateServices_viewName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="viewEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IViewAndUpdateServices/viewEmail" message="tns:IViewAndUpdateServices_viewEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IViewAndUpdateServices/viewEmailResponse" message="tns:IViewAndUpdateServices_viewEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="viewPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IViewAndUpdateServices/viewPassword" message="tns:IViewAndUpdateServices_viewPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IViewAndUpdateServices/viewPasswordResponse" message="tns:IViewAndUpdateServices_viewPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="viewUserName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IViewAndUpdateServices/viewUserName" message="tns:IViewAndUpdateServices_viewUserName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IViewAndUpdateServices/viewUserNameResponse" message="tns:IViewAndUpdateServices_viewUserName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="viewMobileNumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/IViewAndUpdateServices/viewMobileNumber" message="tns:IViewAndUpdateServices_viewMobileNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IViewAndUpdateServices/viewMobileNumberResponse" message="tns:IViewAndUpdateServices_viewMobileNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="viewAddress">
+      <wsdl:input wsaw:Action="http://tempuri.org/IViewAndUpdateServices/viewAddress" message="tns:IViewAndUpdateServices_viewAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IViewAndUpdateServices/viewAddressResponse" message="tns:IViewAndUpdateServices_viewAddress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="viewCreditNumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/IViewAndUpdateServices/viewCreditNumber" message="tns:IViewAndUpdateServices_viewCreditNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IViewAndUpdateServices/viewCreditNumberResponse" message="tns:IViewAndUpdateServices_viewCreditNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="viewCreditPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IViewAndUpdateServices/viewCreditPassword" message="tns:IViewAndUpdateServices_viewCreditPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IViewAndUpdateServices/viewCreditPasswordResponse" message="tns:IViewAndUpdateServices_viewCreditPassword_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IViewAndUpdateServices" type="tns:IViewAndUpdateServices">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="viewName">
+      <soap:operation soapAction="http://tempuri.org/IViewAndUpdateServices/viewName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="viewEmail">
+      <soap:operation soapAction="http://tempuri.org/IViewAndUpdateServices/viewEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="viewPassword">
+      <soap:operation soapAction="http://tempuri.org/IViewAndUpdateServices/viewPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="viewUserName">
+      <soap:operation soapAction="http://tempuri.org/IViewAndUpdateServices/viewUserName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="viewMobileNumber">
+      <soap:operation soapAction="http://tempuri.org/IViewAndUpdateServices/viewMobileNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="viewAddress">
+      <soap:operation soapAction="http://tempuri.org/IViewAndUpdateServices/viewAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="viewCreditNumber">
+      <soap:operation soapAction="http://tempuri.org/IViewAndUpdateServices/viewCreditNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="viewCreditPassword">
+      <soap:operation soapAction="http://tempuri.org/IViewAndUpdateServices/viewCreditPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ViewAndUpdateServices">
+    <wsdl:port name="BasicHttpBinding_IViewAndUpdateServices" binding="tns:BasicHttpBinding_IViewAndUpdateServices">
+      <soap:address location="http://localhost:62525/ViewAndUpdateServices.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
