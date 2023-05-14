@@ -34,5 +34,24 @@ namespace ViewAndUpdateServices
 
         [OperationContract]  //8
         string viewCreditPassword(int id);
+
+        [OperationContract]
+        void UpdateuserName(string data, int uid);
+        [OperationContract]
+        void UpdateuserAddress(string data, int uid);
+        [OperationContract]
+        void UpdateuserEmail(string data, int uid);
+        [OperationContract]
+        void UpdateuserPassword(string data, int uid);
+        [OperationContract]
+        void UpdateuserUserName(string data, int uid);
+        [OperationContract]
+        void UpdateuserMobileNumber(string data, int uid);
+        [OperationContract]
+        void UpdateuserCreditNumber(string data, int uid);
+        [OperationContract]
+        void UpdateuserCreditPassword(string data, int uid);
+
+
     }
 }
