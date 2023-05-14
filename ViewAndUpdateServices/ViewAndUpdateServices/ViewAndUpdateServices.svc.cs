@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -21,9 +21,9 @@ namespace ViewAndUpdateServices
         {
             string add="";
 
-            SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=BikesShopDB;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=bike_shop;Integrated Security=True");
             con.Open();
-            SqlCommand cmd = new SqlCommand("select address from [user] where userId=@x", con);
+            SqlCommand cmd = new SqlCommand("select Address from [User] where userId=@x", con);
             SqlParameter p1 = new SqlParameter("@x", id);
             cmd.Parameters.Add(p1);
             SqlDataReader s=cmd.ExecuteReader();
@@ -47,9 +47,9 @@ namespace ViewAndUpdateServices
         {
             string creditNum="";
 
-            SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=BikesShopDB;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=bike_shop;Integrated Security=True");
             con.Open();
-            SqlCommand cmd = new SqlCommand("select credit_number from [user] where userId=@x", con);
+            SqlCommand cmd = new SqlCommand("select creditcardnumber from [User] where userId=@x", con);
             SqlParameter p1 = new SqlParameter("@x", id);
             cmd.Parameters.Add(p1);
             SqlDataReader s = cmd.ExecuteReader();
@@ -73,9 +73,9 @@ namespace ViewAndUpdateServices
         {
             string creditPass = "";
 
-            SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=BikesShopDB;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=bike_shop;Integrated Security=True");
             con.Open();
-            SqlCommand cmd = new SqlCommand("select credit_password from [user] where userId=@x", con);
+            SqlCommand cmd = new SqlCommand("select creditcardpassword from [User] where userId=@x", con);
             SqlParameter p1 = new SqlParameter("@x", id);
             cmd.Parameters.Add(p1);
             SqlDataReader s = cmd.ExecuteReader();
@@ -83,7 +83,7 @@ namespace ViewAndUpdateServices
             {
                 while (s.Read())
                 {
-                    creditPass = s.GetString(0);
+                    creditPass = s.ToString();
                 }
 
             }
@@ -99,9 +99,9 @@ namespace ViewAndUpdateServices
         {
             string email = "";
 
-            SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=BikesShopDB;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=bike_shop;Integrated Security=True");
             con.Open();
-            SqlCommand cmd = new SqlCommand("select email from [user] where userId=@x", con);
+            SqlCommand cmd = new SqlCommand("select email from [User] where userId=@x", con);
             SqlParameter p1 = new SqlParameter("@x", id);
             cmd.Parameters.Add(p1);
             SqlDataReader s = cmd.ExecuteReader();
@@ -125,9 +125,9 @@ namespace ViewAndUpdateServices
         {
             string mobile = "";
 
-            SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=BikesShopDB;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=bike_shop;Integrated Security=True");
             con.Open();
-            SqlCommand cmd = new SqlCommand("select mobile_number from [user] where userId=@x", con);
+            SqlCommand cmd = new SqlCommand("select MobileNumber from [User] where userId=@x", con);
             SqlParameter p1 = new SqlParameter("@x", id);
             cmd.Parameters.Add(p1);
             SqlDataReader s = cmd.ExecuteReader();
@@ -151,9 +151,9 @@ namespace ViewAndUpdateServices
         {
             string name = "";
 
-            SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=BikesShopDB;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=bike_shop;Integrated Security=True");
             con.Open();
-            SqlCommand cmd = new SqlCommand("select name from [user] where userId=@x", con);
+            SqlCommand cmd = new SqlCommand("select Name from [User] where userId=@x", con);
             SqlParameter p1 = new SqlParameter("@x", id);
             cmd.Parameters.Add(p1);
             SqlDataReader s = cmd.ExecuteReader();
@@ -177,9 +177,9 @@ namespace ViewAndUpdateServices
         {
             string pass = "";
 
-            SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=BikesShopDB;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=bike_shop;Integrated Security=True");
             con.Open();
-            SqlCommand cmd = new SqlCommand("select password from [user] where userId=@x", con);
+            SqlCommand cmd = new SqlCommand("select password from [User] where userId=@x", con);
             SqlParameter p1 = new SqlParameter("@x", id);
             cmd.Parameters.Add(p1);
             SqlDataReader s = cmd.ExecuteReader();
@@ -203,9 +203,9 @@ namespace ViewAndUpdateServices
         {
             string username = "";
 
-            SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=BikesShopDB;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=bike_shop;Integrated Security=True");
             con.Open();
-            SqlCommand cmd = new SqlCommand("select username from [user] where userId=@x", con);
+            SqlCommand cmd = new SqlCommand("select username from [User] where userId=@x", con);
             SqlParameter p1 = new SqlParameter("@x", id);
             cmd.Parameters.Add(p1);
             SqlDataReader s = cmd.ExecuteReader();
@@ -224,6 +224,8 @@ namespace ViewAndUpdateServices
             con.Close();
             return username;
         }
+    }
+}
 
         public void UpdateuserName(string data, int uid)
         {
