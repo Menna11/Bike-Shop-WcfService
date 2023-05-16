@@ -224,8 +224,6 @@ namespace ViewAndUpdateServices
             con.Close();
             return username;
         }
-    }
-}
 
         public void UpdateuserName(string data, int uid)
         {
